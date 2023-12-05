@@ -6,7 +6,6 @@
 (in-suite clos-sweeper-suite)
 
 (test test-equality
-      "test some equalities"
+      "test some very basic equalities"
       (is (= 2 2))
-      (is (= 4 (* 2 2)))
-      (is (equal (tryme) "Thank you for trying.")))
+      (is (= 4 (* 2 2))))

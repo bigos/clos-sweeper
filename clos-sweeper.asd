@@ -27,6 +27,7 @@
 ;; testing --------------------------
 ;; (ql:quickload :clos-sweeper/tests)
 ;; (clos-sweeper-test:run!)
+;; (asdf:test-system :clos-sweeper/tests)
 
 (asdf:defsystem #:clos-sweeper/tests
   :depends-on (#:clos-sweeper #:fiveam)
