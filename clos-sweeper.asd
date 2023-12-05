@@ -9,6 +9,7 @@
                #:serapeum
                #:defclass-std
                #:cl-gtk4 #:cl-gdk4 #:cl-glib #:cl-cairo2)
+  :pathname "src/"
   :serial t
   :components ((:file "package")
                (:file "globals")
