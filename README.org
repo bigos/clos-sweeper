@@ -24,6 +24,19 @@ Run the following
 (clos-sweeper::main)
 #+end_example
 
+** Testing
+
+*** in the terminal
+#+begin_example
+sbcl --load  ~/Programming/Lisp/clos-sweeper/testing.lisp
+#+end_example
+
+*** in the REPL
+#+begin_src lisp
+  (push #p"/home/jacek/Programming/Lisp/clos-sweeper/" asdf:*central-registry*)
+  (asdf:test-system :clos-sweeper/tests)
+#+end_src
+
 ** Not implemented
 
 *** Menu
