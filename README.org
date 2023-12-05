@@ -1,0 +1,17 @@
+* clos-sweeper
+
+A toy mine sweeper written in Common Lisp
+
+**  License
+
+Public Domain
+
+** Libraries
+
+https://github.com/bohonghuang/cl-gtk4
+
+https://lispcookbook.github.io/cl-cookbook/clos.html
+
+** More
+
+I wrote to experiment with small GUI projects in Lisp.
