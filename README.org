@@ -12,6 +12,22 @@ https://github.com/bohonghuang/cl-gtk4
 
 https://lispcookbook.github.io/cl-cookbook/clos.html
 
-** More
+** Running it
 
-I wrote to experiment with small GUI projects in Lisp.
+Make sure you have quicklisp and ultralisp installed.
+
+Run the following
+
+#+begin_example
+(push #p"/home/jacek/Programming/Lisp/clos-sweeper/" asdf:*central-registry*)
+(ql:quickload :clos-sweeper)
+(clos-sweeper::main)
+#+end_example
+
+** Not implemented
+
+*** Menu
+Noting works, except the 8x8 New Game.
+
+*** Icons
+No icons yet, the state of the game is indicated by colour of the tiles.

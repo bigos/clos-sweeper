@@ -20,6 +20,6 @@
                (:file "gtk4")
                (:file "clos-sweeper")))
 
-;; (push #p"/home/jacekp/Programming/Lisp/clos-sweeper/" asdf:*central-registry*)
+;; (push #p"/home/jacek/Programming/Lisp/clos-sweeper/" asdf:*central-registry*)
 ;; (ql:quickload :clos-sweeper)
 ;; (clos-sweeper::main)
