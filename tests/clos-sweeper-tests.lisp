@@ -8,9 +8,13 @@
 (in-suite clos-sweeper-suite)
 
 (test test-equality
-      "test some very basic equalities"
-      (is (= 2 2))
-      (is (= 4 (* 2 2))))
+  "test some very basic equalities"
+  (is (= 2 2))
+  (is (= 4 (* 2 2)))
+  ;; a little example for checking errors
+  (signals error (/ 1 0))
+  (signals arithmetic-error (/ 2 0))
+  (signals division-by-zero (/ 3 0)))
 
 (test grid-building
   "test building grid without the arguments"
@@ -35,4 +39,5 @@
     (is (type-of b) 'grid)
     (is (= (* 32 32) (length (clos-sweeper::children b)))))
   ;; find error detection
-  (signals (clos-sweeper::build-grid 15)))
+  ;(signals (clos-sweeper::build-grid 15))
+  )
