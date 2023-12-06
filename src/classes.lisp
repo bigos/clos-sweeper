@@ -45,16 +45,12 @@
    (parent)
    (children)))
 
-(defun build-grid (&optional size)
+(defun build-grid (&optional (size 8))
   (let* ((offset-x 50)
          (offset-y 20)
-         (grid-size (cond
-                      ((eq size 8) 8)
-                      ((eq size 16) 16)
-                      ((eq size 32) 32)
-                      (T
-                       (warn "Unexpected size ~S, defaulting to 8" size)
-                       8)))
+         (grid-size (if (member size '(8 16 32))
+                        size
+                        (error "Unexpected size ~S" size)))
          (dist (* 0.8  (min (or (width *model*)
                                 20)
                             (or (height *model*)
