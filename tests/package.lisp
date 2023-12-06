@@ -1,12 +1,5 @@
 (defpackage #:clos-sweeper-test
-  (:use #:cl
-        #:fiveam
+  (:use #:fiveam
         #:clos-sweeper)
   (:export #:run!
-           #:clos-sweeper-suite)
-  ;; (:import-from #:clos-sweeper
-  ;;               :build-grid
-  ;;               :children
-  ;;               :init-model
-  ;;               )
-  )
+           #:clos-sweeper-suite))
