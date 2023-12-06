@@ -32,8 +32,9 @@
       (:menu-bool   (setf (selection *model*) (format nil "~S" args)))
       (:menu-radio  (progn
                       (setf (selection *model*) (format nil "~S" args))
-                      (when (and (equalp (first args) "new-game-size")
-                                 (equalp (rest args) '("SMALL")))
+                      (when (equalp (first args) "new-game-size")
+                        (ecase zzz)
+
                         (init-model (width *model*) (height *model*))
                         (process-event :resize (width *model*) (height *model*)))))
       (:motion (set-mouse *model* args))

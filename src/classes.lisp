@@ -3,8 +3,8 @@
 ;;; ====================== classes =============================================
 (defclass/std model (set-unbound-slots-mixin)
   ((selection :type string)
-   (width)
-   (height)
+   (width  :documentation "Canvas width")
+   (height :documentation "Canvas height")
    (mouse-x)
    (mouse-y)
    (button-1)
@@ -45,10 +45,16 @@
    (parent)
    (children)))
 
-(defun build-grid ()
+(defun build-grid (&optional size)
   (let* ((offset-x 50)
          (offset-y 20)
-         (grid-size 8)                  ; TODO hardcoded
+         (grid-size (cond
+                      ((eq size 8) 8)
+                      ((eq size 16) 16)
+                      ((eq size 32) 32)
+                      (T
+                       (warn "Unsexpected size ~S, defaulting to 8" size)
+                       8)))
          (dist (* 0.8  (min (or (width *model*)
                                 20)
                             (or (height *model*)
