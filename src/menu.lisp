@@ -124,11 +124,7 @@
           (build-items
            (prepare-item-radio app menu "Small 8x8"    "new-game-size" "SMALL")
            (prepare-item-radio app menu "Medium 16x16" "new-game-size" "MEDIUM")
-           (prepare-item-radio app menu "Large 32x32"  "new-game-size" "LARGE"))))
-       (prepare-section
-        nil
-        (build-items
-         (prepare-item-simple app menu "Nothing" "nothing"))))
+           (prepare-item-radio app menu "Large 32x32"  "new-game-size" "LARGE")))))
       (prepare-section
        nil
        (build-items
