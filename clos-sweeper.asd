@@ -36,3 +36,6 @@
                                       (uiop:find-symbol*
                                        :clos-sweeper-suite
                                        :clos-sweeper-test))))
+;; (ql:quickload :clos-sweeper/tests)
+;; (in-package #:clos-sweeper-test)
+;; (run! 'clos-sweeper-suite)
