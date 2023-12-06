@@ -1,9 +1,9 @@
 ;;;; clos-sweeper.asd
 
 (asdf:defsystem #:clos-sweeper
-  :description "Describe clos-sweeper here"
-  :author "Your Name <your.name@example.com>"
-  :license  "Specify license here"
+  :description "Clos-sweeper is a simple mine sweeper game"
+  :author "ruby.object@googlemail.com"
+  :license  "Public Domain"
   :version "0.0.1"
   :depends-on (#:alexandria
                #:serapeum
