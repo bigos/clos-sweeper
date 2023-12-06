@@ -94,7 +94,7 @@
                      (gtk4:application-window-show-menubar-p window) T)
 
                     (setf
-                     (gtk4:window-title window) "Better Menu"
+                     (gtk4:window-title window) "CLOS Sweeper"
                      (gtk4:window-default-size window) (list 400 400))
 
                     (let ((box (gtk4:make-box :orientation gtk4:+orientation-vertical+
