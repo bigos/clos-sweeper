@@ -33,9 +33,14 @@
       (:menu-radio  (progn
                       (setf (selection *model*) (format nil "~S" args))
                       (when (equalp (first args) "new-game-size")
-                        (ecase zzz)
-
-                        (init-model (width *model*) (height *model*))
+                        (init-model (width *model*)
+                                    (height *model*)
+                                    (cond ((equalp (cadr args) "SMALL")  8)
+                                          ((equalp (cadr args) "MEDIUM") 16)
+                                          ((equalp (cadr args) "LARGE")  32)
+                                          (T
+                                           (warn "Unexpected size ~A, defaulting to SMALL" (cadr args))
+                                           8)))
                         (process-event :resize (width *model*) (height *model*)))))
       (:motion (set-mouse *model* args))
       (:enter  (set-mouse *model* args))
@@ -60,7 +65,8 @@
       (:timeout)
       )
 
-    ;; inspired by Gtk4, think of separate from update layout phase
+    ;; inspired by Gtk4, think of separate from update layout phas
+    e
     ;; https://docs.gtk.org/gtk4/drawing-model.html
     ;; geometry changes calculated
 

@@ -40,7 +40,7 @@ sbcl --load  ~/Programming/Lisp/clos-sweeper/testing.lisp
 ** Not implemented
 
 *** Menu
-Noting works, except the 8x8 New Game.
+Only starting game at different sizes works
 
 *** Icons
 No icons yet, the state of the game is indicated by colour of the tiles.

@@ -13,12 +13,12 @@
    (grid))
   (:metaclass checked-class))
 
-(defun init-model (&optional width height)
+(defun init-model (&optional width height (grid-size 8))
   (setf *model* (make-instance 'model
                                :selection "start uncovering mines"
                                :width width
                                :height height))
-  (setf (grid *model*) (build-grid))
+  (setf (grid *model*) (build-grid grid-size))
   *model*)
 
 (defclass/std box (rel)
@@ -29,7 +29,7 @@
    (state))) ; covered-empty=nil, covered-mine, empty, flagged-mine, exploded-mine
 
 (defclass/std grid (box)
-  ((grid-size :std 8)))
+  ((grid-size)))
 
 (defun build-box (class id x y w h)
   (make-instance class
@@ -53,7 +53,7 @@
                       ((eq size 16) 16)
                       ((eq size 32) 32)
                       (T
-                       (warn "Unsexpected size ~S, defaulting to 8" size)
+                       (warn "Unexpected size ~S, defaulting to 8" size)
                        8)))
          (dist (* 0.8  (min (or (width *model*)
                                 20)
@@ -62,8 +62,13 @@
          (tile-size (* 0.70 dist))
          (mines-count  (floor (/ (expt grid-size 2)
                                  4)))
-         (parent (build-box 'grid :GRID offset-x offset-y (* dist grid-size)
-                            (* dist grid-size))))
+         (parent (make-instance 'grid
+                                :id :GRID
+                                :top-left-x offset-x
+                                :top-left-y offset-x
+                                :bottom-right-x  (* dist grid-size)
+                                :bottom-right-y  (* dist grid-size)
+                                :grid-size grid-size)))
                                         ;that still shows, we need better way for different boxes
     (loop for r from 0 below grid-size do
       (loop for c from 0 below grid-size do
