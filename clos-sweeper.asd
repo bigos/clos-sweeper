@@ -25,6 +25,7 @@
 ;; (ql:quickload :clos-sweeper)
 ;; (in-package :clos-sweeper)
 ;; (main)
+;; (ql:quickload :clos-sweeper/tests)
 ;; (clos-sweeper-test:run! 'clos-sweeper-test:clos-sweeper-suite)
 
 (asdf:defsystem #:clos-sweeper/tests
