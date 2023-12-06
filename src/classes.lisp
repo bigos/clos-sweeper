@@ -48,13 +48,17 @@
 (defun build-grid ()
   (let* ((offset-x 50)
          (offset-y 20)
-         (grid-size 8)
-         (dist (* 0.8  (min (or (width *model*) 20) (or (height *model*) 20))))
+         (grid-size 8)                  ; TODO hardcoded
+         (dist (* 0.8  (min (or (width *model*)
+                                20)
+                            (or (height *model*)
+                                20))))
          (tile-size (* 0.70 dist))
          (mines-count  (floor (/ (expt grid-size 2)
                                  4)))
-
-         (parent (build-box 'grid :GRID offset-x offset-y (* dist grid-size) (* dist grid-size)))) ;that still shows, we need better way for different boxes
+         (parent (build-box 'grid :GRID offset-x offset-y (* dist grid-size)
+                            (* dist grid-size))))
+                                        ;that still shows, we need better way for different boxes
     (loop for r from 0 below grid-size do
       (loop for c from 0 below grid-size do
         (let* ((k (list :id r c))
@@ -62,8 +66,7 @@
                                k
                                (+ offset-x (* r dist))
                                (+ offset-y (* c dist))
-                               tile-size tile-size
-                               )))
+                               tile-size tile-size)))
           (add-child parent box))))
     (loop for b in
                 (subseq (alexandria:shuffle (children parent)) 0 mines-count)

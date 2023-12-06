@@ -23,11 +23,8 @@
 
 ;; (push #p"/home/jacek/Programming/Lisp/clos-sweeper/" asdf:*central-registry*)
 ;; (ql:quickload :clos-sweeper)
-;; (clos-sweeper::main)
-;; testing --------------------------
-;; (ql:quickload :clos-sweeper/tests)
-;; (clos-sweeper-test:run!)
-;; (asdf:test-system :clos-sweeper/tests)
+;; (in-package :clos-sweeper)
+;; (main)
 
 (asdf:defsystem #:clos-sweeper/tests
   :depends-on (#:clos-sweeper #:fiveam)
