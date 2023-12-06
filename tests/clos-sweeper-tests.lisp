@@ -19,25 +19,25 @@
 (test grid-building
   "test building grid without the arguments"
   ;; we need to init model for the global *model* variable
-  (clos-sweeper::init-model)
-  (let ((b (clos-sweeper::build-grid)))
+  (init-model)
+  (let ((b (build-grid)))
     (is (not (null b)))
     (is (type-of b) 'grid)
-    (is (= (* 8 8) (length (clos-sweeper::children b)))))
-  (let ((b (clos-sweeper::build-grid 8)))
+    (is (= (* 8 8) (length (children b)))))
+  (let ((b (build-grid 8)))
     (is (not (null b)))
     (is (type-of b) 'grid)
-    (is (= (* 8 8) (length (clos-sweeper::children b)))))
+    (is (= (* 8 8) (length (children b)))))
 
-  (let ((b (clos-sweeper::build-grid 16)))
+  (let ((b (build-grid 16)))
     (is (not (null b)))
     (is (type-of b) 'grid)
-    (is (= (* 16 16) (length (clos-sweeper::children b)))))
+    (is (= (* 16 16) (length (children b)))))
 
-  (let ((b (clos-sweeper::build-grid 32)))
+  (let ((b (build-grid 32)))
     (is (not (null b)))
     (is (type-of b) 'grid)
-    (is (= (* 32 32) (length (clos-sweeper::children b)))))
+    (is (= (* 32 32) (length (children b)))))
 
-  (signals error (clos-sweeper::build-grid 15))
+  (signals error (build-grid 15))
   )
