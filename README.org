@@ -19,7 +19,7 @@ Make sure you have quicklisp and ultralisp installed.
 Run the following
 
 #+begin_example
-(push #p"/home/jacek/Programming/Lisp/clos-sweeper/" asdf:*central-registry*)
+(push #p"~/Programming/Lisp/clos-sweeper/" asdf:*central-registry*)
 (ql:quickload :clos-sweeper)
 (clos-sweeper::main)
 #+end_example
@@ -33,7 +33,7 @@ sbcl --load  ~/Programming/Lisp/clos-sweeper/testing.lisp
 
 *** in the REPL
 #+begin_src lisp
-  (push #p"/home/jacek/Programming/Lisp/clos-sweeper/" asdf:*central-registry*)
+  (push #p"~/Programming/Lisp/clos-sweeper/" asdf:*central-registry*)
   (asdf:test-system :clos-sweeper/tests)
 #+end_src
 

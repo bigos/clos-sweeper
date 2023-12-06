@@ -5,7 +5,7 @@
 (defun testing ()
   (format t "running testing~%")
 
-  (push #p"/home/jacek/Programming/Lisp/clos-sweeper/" asdf:*central-registry*)
+  (push #p"~/Programming/Lisp/clos-sweeper/" asdf:*central-registry*)
   (asdf:test-system :clos-sweeper/tests)
 
   (sb-ext:exit))
