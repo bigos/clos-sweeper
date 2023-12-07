@@ -57,7 +57,7 @@ Run the following
 ;; or
 (push #p"~/Programming/Lisp/clos-sweeper/" asdf:*central-registry*)
 (ql:quickload :clos-sweeper)
-(clos-sweeper::main)
+(clos-sweeper::main) 
 #+end_example
 
 ** Testing
