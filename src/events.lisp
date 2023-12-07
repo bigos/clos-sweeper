@@ -30,8 +30,11 @@
     (ecase event
       (:menu-simple (progn
                       (setf (selection *model*) (format nil "~S" args))
-                      (when (equalp (first args) "quit")
-                        (close-all-windows-and-quit))))
+                      (cond
+                        ((equalp (first args) "about")
+                         (present-about-dialog))
+                        ((equalp (first args) "quit")
+                         (close-all-windows-and-quit)))))
       (:menu-bool (progn
                     (setf (selection *model*) (format nil "~S" args))))
       (:menu-radio  (progn

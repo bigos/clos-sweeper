@@ -1,6 +1,27 @@
 (in-package #:clos-sweeper)
 
 
+;; =========================== dialogs =========================================
+(defun present-about-dialog ()
+  (let ((dialog (about-dialog)))
+    (setf (gtk4:window-modal-p dialog) t
+          (gtk4:window-transient-for dialog) (gtk4:application-active-window *app*))
+    (gtk4:window-present dialog)))
+
+(defun about-dialog ()
+  (let ((dialog (gtk4:make-about-dialog))
+        (system (asdf:find-system :clos-sweeper)))
+    (setf (gtk4:about-dialog-authors      dialog)   (list "Jacek Podkanski")
+          (gtk4:about-dialog-website      dialog)   "https://github.com/bigos/clos-sweeper"
+          (gtk4:about-dialog-program-name dialog)   "CLOS Sweeper"
+          (gtk4:about-dialog-comments     dialog)   "A sample GUI app written in Lisp"
+          (gtk4:about-dialog-license      dialog)   "Public Domain"
+          (gtk4:about-dialog-system-information dialog) (format nil "~A ~A"
+                                                                (lisp-implementation-type)
+                                                                (lisp-implementation-version))
+          (gtk4:about-dialog-logo-icon-name dialog) "application-x-addon")
+    (values dialog)))
+
 ;; =========================== closing everything ==============================
 (defun close-all-windows-and-quit ()
   (loop for aw = (gtk4:application-active-window *app*)
