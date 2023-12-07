@@ -38,6 +38,8 @@ For some reason I get error on Windows. Once I fix it we may or may not have pro
 Run the following
 
 #+begin_example
+(push #p"c:/Users/jacek/Programming/Lisp/clos-sweeper/" asdf:*central-registry*)
+;; or
 (push #p"~/Programming/Lisp/clos-sweeper/" asdf:*central-registry*)
 (ql:quickload :clos-sweeper)
 (clos-sweeper::main)
