@@ -14,7 +14,26 @@ https://lispcookbook.github.io/cl-cookbook/clos.html
 
 ** Running it
 
+Make sure SBCL is installed
+
 Make sure you have quicklisp and ultralisp installed.
+
+https://www.quicklisp.org/beta/
+
+https://ultralisp.org/
+
+Make sure you have gtk4 libraries installed.
+
+On Ubuntu like Linux you run: sudo apt install libgtk-4-dev
+
+On Windows 11 with MSYS2 run MINGW64 terminal and execute:
+ pacman -S mingw-w64-x86_64-gtk4 mingw-w64-x86_64-cairo mingw-w64-x86_64-gobject-introspection 
+
+Edit environment variables for your account and add path to the dll files installect in the previous step
+On my system it is: c:/msys64/mingw64/bin
+
+For some reason I get error on Windows. I have informed the author of the bindings, once I know more I will try to run it on Windows as well.
+
 
 Run the following
 
