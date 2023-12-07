@@ -28,8 +28,12 @@
       (format t "~&processing event ~S ~S ~S~%" event (first args) (rest args)))
     ;; like in Elm runtime calling the update
     (ecase event
-      (:menu-simple (setf (selection *model*) (format nil "~S" args)))
-      (:menu-bool   (setf (selection *model*) (format nil "~S" args)))
+      (:menu-simple (progn
+                      (setf (selection *model*) (format nil "~S" args))
+                      (when (equalp (first args) "quit")
+                        (close-all-windows-and-quit))))
+      (:menu-bool (progn
+                    (setf (selection *model*) (format nil "~S" args))))
       (:menu-radio  (progn
                       (setf (selection *model*) (format nil "~S" args))
                       (when (equalp (first args) "new-game-size")

@@ -1,5 +1,12 @@
 (in-package #:clos-sweeper)
 
+
+;; =========================== closing everything ==============================
+(defun close-all-windows-and-quit ()
+  (loop for aw = (gtk4:application-active-window *app*)
+        until (null aw)
+        do (gtk4:window-close aw)))
+
 ;; ============================= key event translation =========================
 (defun translate-key-args (args)
   (destructuring-bind (keyval keycode keymods) args
