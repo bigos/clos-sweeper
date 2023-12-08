@@ -85,11 +85,13 @@ sbcl --load  ~/Programming/Lisp/clos-sweeper/testing.lisp
 *** in the REPL
 #+begin_src lisp
   (push #p"~/Programming/Lisp/clos-sweeper/" asdf:*central-registry*)
+  (ql:quickload :clos-sweeper/tests)
   (asdf:test-system :clos-sweeper/tests)
 #+end_src
 
 Some tests may write a snapshot of the canvas. It goes to /tmp/ on Linux
 and on Windows it goes to: C:\Users\jacek\AppData\Local\Temp
+that folder does not seem to be cleared on reboot as /tmp/ on Linux.
 
 ** Not implemented
 
