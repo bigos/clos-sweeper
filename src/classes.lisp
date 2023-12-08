@@ -119,6 +119,14 @@
 (defmethod height ((box box))
   (- (bottom-right-y box) (top-left-y box)))
 
+;;; for testing
+(defmethod middle ((box box))
+  (list
+   (+ (top-left-x box)
+      (/ (width box) 2))
+   (+ (top-left-y box)
+      (/ (height box) 2))))
+
 (defmethod %rectangle ((box box))
   (cairo:rectangle (top-left-x box)
                    (top-left-y box)

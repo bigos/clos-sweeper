@@ -72,8 +72,7 @@
       (:timeout)
       )
 
-    ;; inspired by Gtk4, think of separate from update layout phas
-    e
+    ;; inspired by Gtk4, think of separate from update layout phase
     ;; https://docs.gtk.org/gtk4/drawing-model.html
     ;; geometry changes calculated
 
@@ -95,7 +94,7 @@
                                          collect c)) ))
              (format nil "You lost!!!"))
             ((zerop covered-mines)
-             (format nil "You won!!"))
+             (format nil "You won!!!"))
                 (T
                  (format nil "Uncover ~A mines more" covered-mines))))))
 

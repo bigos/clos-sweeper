@@ -6,6 +6,20 @@
            #:run-all-tests
            #:clos-sweeper-suite)
   (:import-from #:clos-sweeper
-   :children
+   :*model*
    :build-grid
-   :init-model))
+   :grid
+   :state
+   :children
+   :de-resize
+   :de-pressed
+   :de-released
+   :de-enter
+   :de-motion
+   :middle
+   :height
+   :init-model
+   :selection
+   :simulate-draw-func
+   :width
+   ))
