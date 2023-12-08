@@ -20,7 +20,8 @@
                                                                           (lisp-implementation-type)
                                                                           (lisp-implementation-version)
                                                                           (uiop/os:detect-os)
-                                                                          (uiop/os:architecture)))
+                                                                          (uiop/os:architecture)
+                                                                          (uiop/os:implementation-identifier)))
           (gtk4:about-dialog-logo-icon-name dialog) "application-x-addon")
     (values dialog)))
 

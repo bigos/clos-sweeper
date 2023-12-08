@@ -88,6 +88,9 @@ sbcl --load  ~/Programming/Lisp/clos-sweeper/testing.lisp
   (asdf:test-system :clos-sweeper/tests)
 #+end_src
 
+Some tests may write a snapshot of the canvas. It goes to /tmp/ on Linux
+and on Windows it goes to: C:\Users\jacek\AppData\Local\Temp
+
 ** Not implemented
 
 *** Menu

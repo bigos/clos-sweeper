@@ -55,9 +55,9 @@
                     h))
 
     ;; put drawn surface to a file
-    (cairo:surface-write-to-png surface
-                                (format nil
-                                        "/tmp/cairo-simulate-drawing-~A.png"
+    (cairo:surface-write-to-png surface 
+                                (format nil "~Acairo-simulate-drawing~A.png" 
+                                        (uiop:temporary-directory)
                                         (get-internal-run-time)))))
 
 ;;; ============================ view ==========================================
