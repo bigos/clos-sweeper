@@ -59,6 +59,7 @@
 
   (de-enter 0 0)
   (is (equalp (selection *model*) "start uncovering mines"))
+
   (let ((lmb 1)
         (rmb 3)
         (empty-ones   (serapeum:filter (lambda (c) (null (state c))) (children (grid *model*))))
@@ -97,6 +98,6 @@
       (apply #'de-released (cons rmb  (middle c)))
       (is (eq (state c) :flagged-mine)))
 
-    (is (equalp (selection *model*) "You won!!!"))
-    )
+    (is (equalp (selection *model*) "You won!!!")))
+
   (simulate-draw-func (width *model*) (height *model*)))
