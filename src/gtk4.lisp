@@ -16,9 +16,11 @@
           (gtk4:about-dialog-program-name dialog)   "CLOS Sweeper"
           (gtk4:about-dialog-comments     dialog)   "A sample GUI app written in Lisp"
           (gtk4:about-dialog-license      dialog)   "Public Domain"
-          (gtk4:about-dialog-system-information dialog) (format nil "~A ~A"
-                                                                (lisp-implementation-type)
-                                                                (lisp-implementation-version))
+          (gtk4:about-dialog-system-information dialog) (format nil "~A" (list  
+                                                                          (lisp-implementation-type)
+                                                                          (lisp-implementation-version)
+                                                                          (uiop/os:detect-os)
+                                                                          (uiop/os:architecture)))
           (gtk4:about-dialog-logo-icon-name dialog) "application-x-addon")
     (values dialog)))
 
