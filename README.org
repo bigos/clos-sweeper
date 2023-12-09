@@ -28,9 +28,18 @@ Make sure you have gtk4 libraries installed.
 On Ubuntu like Linux you run: sudo apt install libgtk-4-dev
 
 *** Windows
+First I installed Emacs from using the installer from
+https://www.gnu.org/software/emacs/download.html#nonfree
+
+Then I installed MSYS2
+https://www.msys2.org/
+
+Then I followed the instruction for MSYS2 on:
+https://stdin.top/posts/gtk4-on-windows/
+
 On Windows 11 with MSYS2 run MINGW64 terminal and execute:
-#+begin_example
-  pacman -S mingw-w64-x86_64-gtk4 mingw-w64-x86_64-cairo mingw-w64-x86_64-gobject-introspection
+#+begin_example  
+  pacman -S mingw-w64-x86_64-gcc mingw-w64-x86_64-gtk4 mingw-w64-x86_64-pkg-config mingw-w64-x86_64-cairo mingw-w64-x86_64-gobject-introspection 
 #+end_example
 
 Edit environment variables for your account and add path to the dll files
@@ -38,10 +47,14 @@ installed in the previous step
 
 On my system it is:
 #+begin_example
-c:/msys64/mingw64/bin
-c:/"Program Files"/Emacs/emacs-29.1/bin
+C:\\msys64\\mingw64\\bin
+C:\\msys64\\mingw64\\lib
+C:\\msys64\\mingw64\\include
 #+end_example
 
+The above means we do not need the Cmd example.
+
+*** Cmd
 also I have a *.cmd that starts Emacs with correct environment setting
 
 #+begin_example
@@ -55,8 +68,7 @@ C:\"Program Files"\Emacs\emacs-29.1\bin\runemacs.exe
 That allowed me to run Emacs, slime and play few games without crashing that I
 had before I started looking for the correct environment.
 
-There is no guarantee it will work smoothly on your Windows. If you ahve any
-suggestions or questions please let me know.
+
 
 ** Running
 Run the following
