@@ -52,9 +52,9 @@ C:\\msys64\\mingw64\\lib
 C:\\msys64\\mingw64\\include
 #+end_example
 
-The above means we do not need the Cmd example.
+The above means we do not need the Cmd example to run Emacs and sbcl REPL.
 
-*** Cmd
+*** Cmd files
 also I have a *.cmd that starts Emacs with correct environment setting
 
 #+begin_example
@@ -65,8 +65,16 @@ set PKG_CONFIG_PATH=c:/msys64/mingw64/lib/pkgconfig
 C:\"Program Files"\Emacs\emacs-29.1\bin\runemacs.exe
 #+end_example
 
-That allowed me to run Emacs, slime and play few games without crashing that I
-had before I started looking for the correct environment.
+Also I have cmd_launcher.cmd that starts Windows cmd and allows me to run the tests from cmd.
+The paths in the file have been correctly set up, so I do not understand why I have this glitch.
+
+#+begin_example
+set PATH=c:/msys64/mingw64/bin;c:/msys64/usr/bin;%PATH%
+
+set PKG_CONFIG_PATH=c:/msys64/mingw64/lib/pkgconfig
+
+cmd
+#+end_example
 
 
 
