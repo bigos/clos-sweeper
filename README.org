@@ -62,6 +62,7 @@ set PATH=c:/msys64/mingw64/bin;c:/msys64/usr/bin;%PATH%
 
 set PKG_CONFIG_PATH=c:/msys64/mingw64/lib/pkgconfig
 
+REM launch emacs
 C:\"Program Files"\Emacs\emacs-29.1\bin\runemacs.exe
 #+end_example
 
@@ -73,6 +74,7 @@ set PATH=c:/msys64/mingw64/bin;c:/msys64/usr/bin;%PATH%
 
 set PKG_CONFIG_PATH=c:/msys64/mingw64/lib/pkgconfig
 
+REM launch cmd
 cmd
 #+end_example
 
