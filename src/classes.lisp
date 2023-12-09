@@ -204,18 +204,12 @@
   (loop for c in (children box) do (render c)))
 
 (defmethod resize-grid ((grid grid))
-  (cairo:select-font-face "Ubuntu Mono" :normal :bold)
-  (cairo:set-font-size 20)
-  (let* ((text-height 20)
-         (minsize (min (width *model*)
-                       (- (height *model*)
-                          (* 1.5 text-height))))
+  (let* ((minsize (min (width *model*) (height *model*)))
          (dist (* 0.90 (/ minsize (grid-size grid))))
          (tile-size (* 0.75 dist))
          (vertical-center (/ (width *model*) 2))
          (offset-x  (- vertical-center  (* (/ (grid-size grid) 2) dist) ))
          (offset-y 25))
-    (warn "text height is ~a" text-height)
     (loop for r from 0 below (grid-size grid) do
       (loop for c from 0 below (grid-size grid) do
         (let* ((box (find (list :id r c)
