@@ -38,8 +38,8 @@ Then I followed the instruction for MSYS2 on:
 https://stdin.top/posts/gtk4-on-windows/
 
 On Windows 11 with MSYS2 run MINGW64 terminal and execute:
-#+begin_example  
-  pacman -S mingw-w64-x86_64-gcc mingw-w64-x86_64-gtk4 mingw-w64-x86_64-pkg-config mingw-w64-x86_64-cairo mingw-w64-x86_64-gobject-introspection 
+#+begin_example
+  pacman -S mingw-w64-x86_64-gcc mingw-w64-x86_64-gtk4 mingw-w64-x86_64-cairo mingw-w64-x86_64-gobject-introspection
 #+end_example
 
 Edit environment variables for your account and add path to the dll files
