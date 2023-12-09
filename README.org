@@ -69,6 +69,10 @@ C:\"Program Files"\Emacs\emacs-29.1\bin\runemacs.exe
 Also I have cmd_launcher.cmd that starts Windows cmd and allows me to run the tests from cmd.
 The paths in the file have been correctly set up, so I do not understand why I have this glitch.
 
+Trying to comment out the paths did not work. I have those values set up in the
+paths setting for my Windows account, yet I need the scripts to lanuch Emacs or
+cmd. Why, why why?
+
 #+begin_example
 set PATH=c:/msys64/mingw64/bin;c:/msys64/usr/bin;%PATH%
 
