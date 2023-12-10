@@ -34,55 +34,34 @@ https://www.gnu.org/software/emacs/download.html#nonfree
 Then I installed MSYS2
 https://www.msys2.org/
 
-Then I followed the instruction for MSYS2 on:
-https://stdin.top/posts/gtk4-on-windows/
-
 On Windows 11 with MSYS2 run MINGW64 terminal and execute:
 #+begin_example
   pacman -S mingw-w64-x86_64-gcc mingw-w64-x86_64-gtk4 mingw-w64-x86_64-cairo mingw-w64-x86_64-gobject-introspection
 #+end_example
 
-Edit environment variables for your account and add path to the dll files
-installed in the previous step
-
-On my system it is:
-#+begin_example
-C:\\msys64\\mingw64\\bin
-C:\\msys64\\mingw64\\lib
-C:\\msys64\\mingw64\\include
-#+end_example
-
-The above means we do not need the Cmd example to run Emacs and sbcl REPL.
-
 *** Cmd files
-also I have a *.cmd that starts Emacs with correct environment setting
+I have a *.cmd c=script that starts Emacs with correct environment setting
 
 #+begin_example
 set PATH=c:/msys64/mingw64/bin;c:/msys64/usr/bin;%PATH%
-
 set PKG_CONFIG_PATH=c:/msys64/mingw64/lib/pkgconfig
 
-REM launch emacs
 C:\"Program Files"\Emacs\emacs-29.1\bin\runemacs.exe
 #+end_example
 
-Also I have cmd_launcher.cmd that starts Windows cmd and allows me to run the tests from cmd.
-The paths in the file have been correctly set up, so I do not understand why I have this glitch.
+Also I have powershell_launcher.cmd that starts Windows powershell and allows me
+to run the tests from the shell
 
-Trying to comment out the paths did not work. I have those values set up in the
+Trying to comment out the paths did not work. I have tried those values set up in the
 paths setting for my Windows account, yet I need the scripts to launch Emacs or
-cmd and successfully run the load and run game. Why, why why?
+powershell and successfully load, test and run game. Why, why why?
 
 #+begin_example
 set PATH=c:/msys64/mingw64/bin;c:/msys64/usr/bin;%PATH%
-
 set PKG_CONFIG_PATH=c:/msys64/mingw64/lib/pkgconfig
 
-REM launch cmd
-cmd
+powershell
 #+end_example
-
-
 
 ** Running
 Run the following
