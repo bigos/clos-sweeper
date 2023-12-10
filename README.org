@@ -119,6 +119,14 @@ Some tests may write a snapshot of the canvas. It goes to /tmp/ on Linux
 and on Windows it goes to: C:\Users\jacek\AppData\Local\Temp.
 That folder does not get cleared on reboot as /tmp/ on Linux.
 You have to clear the ~*.png~ files manually.
+
+** Linting
+
+#+begin_example
+(ql:quickload :sblint)
+(sblint/run-lint:run-lint-asd "~/Programming/Lisp/clos-sweeper/clos-sweeper.asd" )
+#+end_example
+
 ** Not implemented
 
 *** Menu
