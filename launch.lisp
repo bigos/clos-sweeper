@@ -15,13 +15,10 @@
 
   (format t "loading clos sweeper~%")
   (ql:quickload :clos-sweeper)
-  (sleep 1)
-  (format t "RUNNING clos sweeper~%")
 
+  (format t "RUNNING clos sweeper~%")
   (uiop:symbol-call :clos-sweeper :main)
 
-  ;; (sb-ext:exit)
-
-  )
+  (sb-ext:exit))
 
 (launch)
