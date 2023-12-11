@@ -64,16 +64,21 @@ powershell
 #+end_example
 
 ** Running
-Run the following
 
-*** Windows
+*** Terminal
+Use the ~cd~ command to go to the root of the project and run:
+#+begin_example
+sbcl --load ./launch.lisp
+#+end_example
+
+*** Windows REPL
 #+begin_example
 (push #p"c:/Users/jacek/Programming/Lisp/clos-sweeper/" asdf:*central-registry*)
 (ql:quickload :clos-sweeper)
 (clos-sweeper::main)
 #+end_example
 
-*** Linux
+*** Linux REPL
 #+begin_example
 (push #p"~/Programming/Lisp/clos-sweeper/" asdf:*central-registry*)
 (ql:quickload :clos-sweeper)
