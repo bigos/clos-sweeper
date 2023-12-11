@@ -50,7 +50,7 @@
   "test building grid without the arguments"
   ;; we need to init model for the global *model* variable
   (init-model)
-  (de-resize 400 500)
+  (de-resize 400 415)
 
   (let ((b (build-grid)))
     (is (not (null b)))
