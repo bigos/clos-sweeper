@@ -175,7 +175,9 @@
         (cairo:set-font-size (height box))
         (multiple-value-bind  (xb yb width height)
             (cairo:text-extents cnt)
-          (declare (ignore xb yb)))
+          (declare (ignore xb yb width height))
+          ;; TODO do something with those values
+          )
         (cairo:set-source-rgb 0 0 0)
         (cairo:move-to (1+ (top-left-x box)) (1- (bottom-right-y box)))
         (cairo:show-text (format nil "~A" cnt)))))

@@ -55,8 +55,8 @@
                     h))
 
     ;; put drawn surface to a file
-    (cairo:surface-write-to-png surface 
-                                (format nil "~Acairo-simulate-drawing~A.png" 
+    (cairo:surface-write-to-png surface
+                                (format nil "~Acairo-simulate-drawing~A.png"
                                         (uiop:temporary-directory)
                                         (get-internal-run-time)))))
 
@@ -64,8 +64,6 @@
 (defun draw-objects (w h)               ; view
   ;; (format t ">>>>>>>> in draw-objects ~S " cairo:*context*)
   (let ((cnt (format nil "~S" (selection *model*)))
-        (tw 0)
-        (th 0)
         (tpx 0)
         (tpy 0))
     (cairo:set-source-rgb 1 1 1)
@@ -78,10 +76,8 @@
     (cairo:set-font-size 20)
     (multiple-value-bind  (xb yb width height)
         (cairo:text-extents cnt)
-      (declare (ignore xb yb))
-      (setf
-       tw width
-       th height))
+      (declare (ignore xb yb width height))
+    )
     (setf tpx 6
           tpy 15)
     (cairo:set-source-rgb 0 0 0)
