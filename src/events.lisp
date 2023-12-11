@@ -31,24 +31,29 @@
       (:menu-simple (progn
                       (setf (selection *model*) (format nil "~S" args))
                       (cond
-                        ((equalp (first args) "about")
+                        ((string= (first args) "about")
                          (present-about-dialog))
-                        ((equalp (first args) "quit")
+                        ((string= (first args) "quit")
                          (close-all-windows-and-quit)))))
       (:menu-bool (progn
-                    (setf (selection *model*) (format nil "~S" args))))
+                    (setf (selection *model*) (format nil "~S" args))
+                    (cond
+                      ((string= (first args) "dark-mode")
+                       (setf (dark-mode *model*) (eq (cadr args) 1))
+                       (warn "set dark mode to ~A" (dark-mode *model*))))))
       (:menu-radio  (progn
                       (setf (selection *model*) (format nil "~S" args))
-                      (when (equalp (first args) "new-game-size")
-                        (init-model (width *model*)
-                                    (height *model*)
-                                    (cond ((equalp (cadr args) "SMALL")  8)
-                                          ((equalp (cadr args) "MEDIUM") 16)
-                                          ((equalp (cadr args) "LARGE")  32)
-                                          (T
-                                           (warn "Unexpected size ~A, defaulting to SMALL" (cadr args))
-                                           8)))
-                        (process-event :resize (width *model*) (height *model*)))))
+                      (cond
+                        ((string= (first args) "new-game-size")
+                         (setf
+                          (grid *model*) (cond ((string= (cadr args) "SMALL")  8)
+                                               ((string= (cadr args) "MEDIUM") 16)
+                                               ((string= (cadr args) "LARGE")  32)
+                                               (T
+                                                (warn "Unexpected size ~A, defaulting to SMALL"
+                                                      (cadr args))
+                                                8)))
+                         (process-event :resize (width *model*) (height *model*))))))
       (:motion (set-mouse *model* args))
       (:enter  (set-mouse *model* args))
       (:leave  (set-mouse *model* args))

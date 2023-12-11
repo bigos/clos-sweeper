@@ -66,7 +66,9 @@
   (let ((cnt (format nil "~S" (selection *model*)))
         (tpx 0)
         (tpy 0))
-    (cairo:set-source-rgb 1 1 1)
+    (if (dark-mode *model*)
+        (cairo:set-source-rgb  0.1 0.1 0.1)
+        (cairo:set-source-rgb  1 1 1))
     (cairo:paint)
 
     (render (grid *model*))

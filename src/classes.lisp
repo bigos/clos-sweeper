@@ -10,10 +10,11 @@
    (button-1)
    (button-2)
    (button-3)
-   (grid))
+   (grid)
+   (dark-mode))
   (:metaclass checked-class))
 
-(defun init-model (&optional width height (grid-size 8))
+(defun init-model (&optional (width 400) (height 420) (grid-size 8))
   (setf *model* (make-instance 'model
                                :selection "start uncovering mines"
                                :width width
