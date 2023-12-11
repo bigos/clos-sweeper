@@ -80,8 +80,8 @@
     ;; like in Elm runtime calling the view
     (if *canvas*
         (gtk4:widget-queue-draw *canvas*)
-        (simulate-draw-func (if (width *model*)  (width *model*)  800)
-                            (if (height *model*) (height *model*) 600)))))
+        (simulate-draw-func (or (width *model*)  800)
+                            (or (height *model*) 600)))))
 
 (defun mine-stats ()
   (let ((covered-mines (length (loop for c in (children (grid *model*))
