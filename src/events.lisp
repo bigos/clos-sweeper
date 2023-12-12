@@ -46,13 +46,16 @@
                       (cond
                         ((string= (first args) "new-game-size")
                          (setf
-                          (grid *model*) (cond ((string= (cadr args) "SMALL")  8)
-                                               ((string= (cadr args) "MEDIUM") 16)
-                                               ((string= (cadr args) "LARGE")  32)
-                                               (T
-                                                (warn "Unexpected size ~A, defaulting to SMALL"
-                                                      (cadr args))
-                                                8)))
+                          (grid *model*)
+                          (build-grid
+                           (cond ((string= (cadr args) "SMALL")  8)
+                                 ((string= (cadr args) "MEDIUM") 16)
+                                 ((string= (cadr args) "LARGE")  32)
+                                 (T
+                                  (warn "Unexpected size ~A, defaulting to SMALL"
+                                        (cadr args))
+                                  8))))
+
                          (process-event :resize (width *model*) (height *model*))))))
       (:motion (set-mouse *model* args))
       (:enter  (set-mouse *model* args))

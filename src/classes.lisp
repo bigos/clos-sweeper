@@ -195,11 +195,19 @@
   (loop for c in (children box) do (render c)))
 
 (defmethod render ((box grid))
-  (set-rgba (if (mouse-over-p box)
-                (if (button-1 *model*)
-                    "#eee"
-                    "white")
-                "#ddd"))
+  (set-rgba
+   (if (dark-mode *model*)
+       (if (mouse-over-p box)
+           (if (button-1 *model*)
+               "#111"
+               "black")
+           "#222")
+
+       (if (mouse-over-p box)
+           (if (button-1 *model*)
+               "#eee"
+               "white")
+           "#ddd")))
 
   (%rectangle box)
   (cairo:stroke-preserve)
