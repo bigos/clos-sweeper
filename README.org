@@ -114,7 +114,8 @@ You have to clear the ~*.png~ files manually.
 ** Not implemented
 
 *** Menu
-Only starting game at different sizes and quit and about dialog work.
+Only theme switching, starting game at different sizes and quit and about dialog
+work.
 
 *** Icons
 No icons yet, the state of the game is indicated by colour of the tiles.
