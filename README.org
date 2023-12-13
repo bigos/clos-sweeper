@@ -136,4 +136,30 @@ https://github.com/roswell/roswell/wiki
 
 https://github.com/roswell/roswell/wiki/How-to-setup-a-lisp-dev-environment-on-windows-with-Roswell
 
-*** raw sbcl and Makefile
+*** generating executable
+
+I was able to generate a windows executable by running the follwing.
+#+begin_example
+sbcl --load build-windows-executable.lisp
+#+end_example
+
+It creates an executeble that after copying to
+#+begin_example
+C:\msys64\mingw64\bin
+#+end_example
+
+starts up and fails on an environment issue
+
+#+begin_example
+PS C:\msys64\mingw64\bin> .\win-clos-sweeper.exe
+
+oo (process:9880): CRITICAL **: 22:03:43.954: g_irepository_find_by_name: assertion 'typelib != NULL' failed
+WARNING: No such FFI name Application
+
+debugger invoked on a SB-PCL::NO-APPLICABLE-METHOD-ERROR in thread
+#<THREAD "main thread" RUNNING {10022B0003}>:
+  There is no applicable method for the generic function
+    #<STANDARD-GENERIC-FUNCTION GIR::NSGET (6)>
+  when called with arguments
+    (NIL GTK4::NEW).
+#+end_example
