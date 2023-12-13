@@ -63,7 +63,7 @@
 ;;; ============================ view ==========================================
 (defun draw-objects (w h)               ; view
   ;; (format t ">>>>>>>> in draw-objects ~S " cairo:*context*)
-  (let ((cnt (format nil "~S" (selection *model*)))
+  (let ((cnt (format nil "~A" (selection *model*)))
         (tpx 0)
         (tpy 0))
     (if (dark-mode *model*)

@@ -2,6 +2,8 @@
 
 A toy mine sweeper written in Common Lisp
 
+file:./screenshot-won.png
+
 **  License
 
 Public Domain
