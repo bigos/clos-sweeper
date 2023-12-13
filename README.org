@@ -133,3 +133,5 @@ ros list installed
 #+end_example
 
 https://github.com/roswell/roswell/wiki
+
+https://github.com/roswell/roswell/wiki/How-to-setup-a-lisp-dev-environment-on-windows-with-Roswell
