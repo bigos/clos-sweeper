@@ -166,3 +166,6 @@ debugger invoked on a SB-PCL::NO-APPLICABLE-METHOD-ERROR in thread
 
 I have previous work here:
 https://github.com/bigos/execnik
+
+*** other work that may provide the solution
+https://github.com/bigos/execnik/blob/master/distribution-on-windows.lisp
