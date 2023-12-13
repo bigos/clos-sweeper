@@ -187,3 +187,7 @@ debugger invoked on a SB-PCL::NO-APPLICABLE-METHOD-ERROR in thread
 
 Could that be the answer?
 https://github.com/andy128k/cl-gobject-introspection/issues/78
+
+https://github.com/andy128k/cl-gobject-introspection/issues/78#issuecomment-578318078
+
+https://github.com/andy128k/cl-gobject-introspection/issues/78#issuecomment-582092349
