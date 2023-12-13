@@ -169,3 +169,18 @@ https://github.com/bigos/execnik
 
 *** other work that may provide the solution
 https://github.com/bigos/execnik/blob/master/distribution-on-windows.lisp
+
+building linux executable gives similar error
+#+begin_example
+$ ./win-clos-sweeper
+
+oo (process:34879): CRITICAL **: 23:23:15.845: g_irepository_find_by_name: assertion 'typelib != NULL' failed
+WARNING: No such FFI name Application
+
+debugger invoked on a SB-PCL::NO-APPLICABLE-METHOD-ERROR in thread
+#<THREAD tid=34879 "main thread" RUNNING {10024D0003}>:
+  There is no applicable method for the generic function
+    #<STANDARD-GENERIC-FUNCTION GIR::NSGET (6)>
+  when called with arguments
+    (NIL GTK4::NEW).
+#+end_example
