@@ -1,8 +1,8 @@
 * clos-sweeper
 
-A toy mine sweeper written in Common Lisp
+[[file:screenshot-won.png]]
 
-file:screenshot-won.png
+A toy mine sweeper written in Common Lisp
 
 **  License
 
