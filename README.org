@@ -184,3 +184,6 @@ debugger invoked on a SB-PCL::NO-APPLICABLE-METHOD-ERROR in thread
   when called with arguments
     (NIL GTK4::NEW).
 #+end_example
+
+Could that be the answer?
+https://github.com/andy128k/cl-gobject-introspection/issues/78
