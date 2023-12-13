@@ -163,3 +163,6 @@ debugger invoked on a SB-PCL::NO-APPLICABLE-METHOD-ERROR in thread
   when called with arguments
     (NIL GTK4::NEW).
 #+end_example
+
+I have previous work here:
+https://github.com/bigos/execnik
