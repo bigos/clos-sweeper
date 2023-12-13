@@ -124,3 +124,9 @@ No icons yet, the state of the game is indicated by colour of the tiles.
 
 ** Compiling sbcl on Windows
 https://gist.github.com/bigos/e6d12a55104f16e88c8c859e9643af67
+
+** roswell has Windows version on Msys2
+https://github.com/roswell/roswell/wiki/Installation#windows
+#+begin_example
+pacman -S mingw-w64-x86_64-roswell
+#+end_example
