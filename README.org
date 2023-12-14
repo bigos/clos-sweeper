@@ -138,6 +138,10 @@ https://github.com/roswell/roswell/wiki/How-to-setup-a-lisp-dev-environment-on-w
 
 *** generating executable
 
+This is work in progress, we have old erroneous attempt mixed with new way of
+generating the executable.
+
+**** old way
 I was able to generate a windows executable by running the follwing.
 #+begin_example
 sbcl --load build-windows-executable.lisp
@@ -167,7 +171,7 @@ debugger invoked on a SB-PCL::NO-APPLICABLE-METHOD-ERROR in thread
 I have previous work here:
 https://github.com/bigos/execnik
 
-*** other work that may provide the solution
+***** other work that may provide the solution
 https://github.com/bigos/execnik/blob/master/distribution-on-windows.lisp
 
 building linux executable gives similar error
@@ -194,4 +198,14 @@ https://github.com/andy128k/cl-gobject-introspection/issues/78#issuecomment-5820
 
 https://github.com/bohonghuang/cl-gobject-introspection-wrapper/issues/4
 
-*** trying new way
+**** trying new way
+running
+#+begin_example
+sbcl --load ./build-linux-executable.lisp
+#+end_example
+generates the executable
+
+the asdf operation generates the file
+file:~/Programming/Lisp/clos-sweeper/build-linux-executable.lisp::5
+
+but we have no way to specify the compression level
