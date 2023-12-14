@@ -34,17 +34,6 @@
                  (:file "gtk4")
                  (:file "clos-sweeper")))
 
-
-
-(asdf:defsystem #:clos-sweeper/executable
-    :depends-on (#:asdf
-                 #:clos-sweeper)
-    :build-operation program-op
-    :build-pathname "clos-sweeper-exec"
-    :entry-point "clos-sweeper:main"
-    :pathname "src/"
-    )
-
 ;; (push #p"~/Programming/Lisp/clos-sweeper/" asdf:*central-registry*)
 ;; (ql:quickload :clos-sweeper)
 ;; (in-package :clos-sweeper)
