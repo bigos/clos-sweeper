@@ -122,8 +122,7 @@ work.
 *** Icons
 No icons yet, the state of the game is indicated by colour of the tiles.
 
-** Compiling sbcl on Windows
-https://gist.github.com/bigos/e6d12a55104f16e88c8c859e9643af67
+** Compiling latest sbcl on Windows
 
 *** roswell
 https://github.com/roswell/roswell/wiki/Installation#windows
@@ -136,82 +135,18 @@ https://github.com/roswell/roswell/wiki
 
 https://github.com/roswell/roswell/wiki/How-to-setup-a-lisp-dev-environment-on-windows-with-Roswell
 
-*** generating executable
+** generating executable
 
-This is work in progress, we have old erroneous attempt mixed with new way of
-generating the executable.
-
-**** old way
-I was able to generate a windows executable by running the follwing.
-#+begin_example
-sbcl --load build-windows-executable.lisp
-#+end_example
-
-It creates an executeble that after copying to
-#+begin_example
-C:\msys64\mingw64\bin
-#+end_example
-
-starts up and fails on an environment issue
-
-#+begin_example
-PS C:\msys64\mingw64\bin> .\win-clos-sweeper.exe
-
-oo (process:9880): CRITICAL **: 22:03:43.954: g_irepository_find_by_name: assertion 'typelib != NULL' failed
-WARNING: No such FFI name Application
-
-debugger invoked on a SB-PCL::NO-APPLICABLE-METHOD-ERROR in thread
-#<THREAD "main thread" RUNNING {10022B0003}>:
-  There is no applicable method for the generic function
-    #<STANDARD-GENERIC-FUNCTION GIR::NSGET (6)>
-  when called with arguments
-    (NIL GTK4::NEW).
-#+end_example
-
-I have previous work here:
-https://github.com/bigos/execnik
-
-***** other work that may provide the solution
-https://github.com/bigos/execnik/blob/master/distribution-on-windows.lisp
-
-building linux executable gives similar error
-#+begin_example
-$ ./win-clos-sweeper
-
-oo (process:34879): CRITICAL **: 23:23:15.845: g_irepository_find_by_name: assertion 'typelib != NULL' failed
-WARNING: No such FFI name Application
-
-debugger invoked on a SB-PCL::NO-APPLICABLE-METHOD-ERROR in thread
-#<THREAD tid=34879 "main thread" RUNNING {10024D0003}>:
-  There is no applicable method for the generic function
-    #<STANDARD-GENERIC-FUNCTION GIR::NSGET (6)>
-  when called with arguments
-    (NIL GTK4::NEW).
-#+end_example
-
-Could that be the answer?
-https://github.com/andy128k/cl-gobject-introspection/issues/78
-
-https://github.com/andy128k/cl-gobject-introspection/issues/78#issuecomment-578318078
-
-https://github.com/andy128k/cl-gobject-introspection/issues/78#issuecomment-582092349
-
-https://github.com/bohonghuang/cl-gobject-introspection-wrapper/issues/4
-
-**** trying new way
 running
 #+begin_example
-sbcl --load ./build-linux-executable.lisp
+sbcl --load ./build-executable.lisp
 #+end_example
 generates the executable
 
-the asdf operation generates the file
-file:~/Programming/Lisp/clos-sweeper/build-linux-executable.lisp::5
-
-but we have no way to specify the compression level
-
-this may be the answer
+this may be the answer to core compression
 https://github.com/lisp-tips/lisp-tips/issues/20
 
 I can confirm that I can generate a Windows executable of over 70Mb and run it
 with the paths declared in the beginning of this document.
+
+
