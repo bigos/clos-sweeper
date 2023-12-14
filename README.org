@@ -212,3 +212,6 @@ but we have no way to specify the compression level
 
 this may be the answer
 https://github.com/lisp-tips/lisp-tips/issues/20
+
+I can confirm that I can generate a Windows executable of over 70Mb and run it
+with the paths declared in the beginning of this document.

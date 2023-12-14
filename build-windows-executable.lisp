@@ -2,9 +2,5 @@
 
 (push #p"c:/Users/jacek/Programming/Lisp/clos-sweeper/" asdf:*central-registry*)
 
-(ql:quickload :clos-sweeper)
-(use-package :clos-sweeper)
+(asdf:make :clos-sweeper)
 
-(sb-ext:save-lisp-and-die "win-clos-sweeper.exe"
-                          :toplevel #'main
-                          :executable t)
