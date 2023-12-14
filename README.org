@@ -209,3 +209,6 @@ the asdf operation generates the file
 file:~/Programming/Lisp/clos-sweeper/build-linux-executable.lisp::5
 
 but we have no way to specify the compression level
+
+this may be the answer
+https://github.com/lisp-tips/lisp-tips/issues/20
