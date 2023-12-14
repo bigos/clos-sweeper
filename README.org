@@ -46,21 +46,15 @@ I have a *.cmd c=script that starts Emacs with correct environment setting
 
 #+begin_example
 set PATH=c:/msys64/mingw64/bin;c:/msys64/usr/bin;%PATH%
-set PKG_CONFIG_PATH=c:/msys64/mingw64/lib/pkgconfig
 
 C:\"Program Files"\Emacs\emacs-29.1\bin\runemacs.exe
 #+end_example
 
-Also I have powershell_launcher.cmd that starts Windows powershell and allows me
-to run the tests from the shell
-
-Trying to comment out the paths did not work. I have tried those values set up in the
-paths setting for my Windows account, yet I need the scripts to launch Emacs or
-powershell and successfully load, test and run game. Why, why why?
+Also I have a similar powershell_launcher.cmd that starts Windows powershell and
+allows me to run the tests and compile the executable from the shell
 
 #+begin_example
 set PATH=c:/msys64/mingw64/bin;c:/msys64/usr/bin;%PATH%
-set PKG_CONFIG_PATH=c:/msys64/mingw64/lib/pkgconfig
 
 powershell
 #+end_example
@@ -115,14 +109,12 @@ You have to clear the ~*.png~ files manually.
 
 ** Not implemented
 
-*** Menu
-Only theme switching, starting game at different sizes and quit and about dialog
-work.
-
 *** Icons
 No icons yet, the state of the game is indicated by colour of the tiles.
 
 ** Compiling latest sbcl on Windows
+I am not sure if roswell will be needed, but I will add the notes just in case
+we need it later.
 
 *** roswell
 https://github.com/roswell/roswell/wiki/Installation#windows
@@ -148,3 +140,5 @@ https://github.com/lisp-tips/lisp-tips/issues/20
 
 I can confirm that I can generate a Windows executable of over 70Mb and run it
 with the paths declared in the beginning of this document.
+
+Building a standalone executable may be done another day.
