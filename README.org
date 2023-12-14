@@ -33,6 +33,9 @@ On Ubuntu like Linux you run: sudo apt install libgtk-4-dev
 First I installed Emacs from using the installer from
 https://www.gnu.org/software/emacs/download.html#nonfree
 
+Then I installed SBCL 2.3.2
+http://www.sbcl.org/platform-table.html
+
 Then I installed MSYS2
 https://www.msys2.org/
 
