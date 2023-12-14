@@ -2,7 +2,10 @@
 
 [[file:screenshot-won.png]]
 
-A toy mine sweeper written in Common Lisp
+A toy mine sweeper written in Common Lisp. Left mouse click uncovers the boxes.
+Right mouse click toggles the mine state. There are two different colours for
+right clicked boxes. Pink if there is a mine in that field and purple for
+flagged field without mine. This makes it helpful to solve even the large grid.
 
 **  License
 

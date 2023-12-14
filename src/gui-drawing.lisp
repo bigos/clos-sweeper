@@ -82,7 +82,9 @@
     )
     (setf tpx 6
           tpy 15)
-    (cairo:set-source-rgb 0 0 0)
+    (if (dark-mode *model*)
+        (cairo:set-source-rgb 1 1 1)
+        (cairo:set-source-rgb 0 0 0))
     (cairo:move-to tpx tpy)
     (cairo:show-text (format nil "~A" cnt))
 
