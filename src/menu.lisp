@@ -131,11 +131,12 @@
         (prepare-item-simple app menu "Quit" "quit"))))
      (prepare-submenu
       "Help"
-      (prepare-section
-       nil
-       (build-items
-        (prepare-item-simple app menu "Help" "help")
-        (prepare-item-simple app menu "Tutorial" "tutorial" :disabled T)))
+      ;; for now I plan to have only the About menu item
+      ;; (prepare-section
+      ;;  nil
+      ;;  (build-items
+      ;;   (prepare-item-simple app menu "Help" "help")
+      ;;   (prepare-item-simple app menu "Tutorial" "tutorial" :disabled T)))
       (prepare-section
        nil
        (build-items
