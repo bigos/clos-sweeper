@@ -191,3 +191,7 @@ https://github.com/andy128k/cl-gobject-introspection/issues/78
 https://github.com/andy128k/cl-gobject-introspection/issues/78#issuecomment-578318078
 
 https://github.com/andy128k/cl-gobject-introspection/issues/78#issuecomment-582092349
+
+https://github.com/bohonghuang/cl-gobject-introspection-wrapper/issues/4
+
+*** trying new way
