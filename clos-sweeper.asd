@@ -19,7 +19,7 @@
                  #:cl-gtk4 #:cl-gdk4 #:cl-glib #:cl-cairo2)
     ;; --------------------------------
     :build-operation program-op
-    :build-pathname "clos-sweeper-exec"
+    :build-pathname "clos-sweeper"
     :entry-point "clos-sweeper:main"
     ;; --------------------------------
     :pathname "src/"

@@ -1,1 +1,2 @@
-src/clos-sweeper-exec.exe 
+# ignore Windows executable
+src/clos-sweeper.exe 
