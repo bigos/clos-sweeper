@@ -19,7 +19,7 @@
                  #:cl-gtk4 #:cl-gdk4 #:cl-glib #:cl-cairo2)
     ;; --------------------------------
     :defsystem-depends-on (:deploy)
-    :build-operation program-op
+    :build-operation "deploy-op"
     :build-pathname "clos-sweeper"
     :entry-point "clos-sweeper:main"
     ;; --------------------------------
