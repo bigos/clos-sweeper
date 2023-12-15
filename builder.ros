@@ -21,7 +21,9 @@ exec ros -Q -- $0 "$@"
       (push #p"~/Programming/Lisp/clos-sweeper/" asdf:*central-registry*))
 
   (unless (member "ultralisp"
-                  (mapcar (lambda (d) (ql-dist:name d))  (ql-dist:all-dists))
+                  (mapcar (lambda (d)
+                            (ql-dist:name d))
+                          (ql-dist:all-dists))
                   :test #'string=)
     (ql-dist:install-dist "http://dist.ultralisp.org/"
                           :prompt nil))
