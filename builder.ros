@@ -15,7 +15,9 @@ exec ros -Q -- $0 "$@"
 (defun main (&rest argv)
   (declare (ignorable argv))
 
-  
+
+  (format t "going to create executable with ~A ~A~%" (lisp-implementation-type) (lisp-implementation-version))
+
   (if (eq (uiop/os:detect-os) :os-windows)
       (push #p"c:/Users/jacek/Programming/Lisp/clos-sweeper/" asdf:*central-registry*)
       (push #p"~/Programming/Lisp/clos-sweeper/" asdf:*central-registry*))
@@ -27,10 +29,11 @@ exec ros -Q -- $0 "$@"
                   :test #'string=)
     (ql-dist:install-dist "http://dist.ultralisp.org/"
                           :prompt nil))
-  
+
   (ql:quickload :clos-sweeper)
   (asdf:make :clos-sweeper)
 
+  (format t "created executable with ~A ~A~%" (lisp-implementation-type) (lisp-implementation-version))
 
   )
 ;;; vim: set ft=lisp lisp:
