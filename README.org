@@ -127,9 +127,11 @@ https://github.com/roswell/roswell/wiki/Installation#windows
 #+begin_example
 # Windows
 pacman -S mingw-w64-x86_64-roswell
+
 # Linux
 sudo apt install roswell
 
+# show your default Lisp
 ros list installed
 #+end_example
 
