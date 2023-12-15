@@ -76,7 +76,7 @@ sbcl --load ./launch.lisp
 *** Windows REPL
 #+begin_example
 (push #p"c:/Users/jacek/Programming/Lisp/clos-sweeper/" asdf:*central-registry*)
-(ql:quickload :clos-sweeper)
+(ql:quickload :clos-sweeper) 
 (clos-sweeper::main)
 #+end_example
 

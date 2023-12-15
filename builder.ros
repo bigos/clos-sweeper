@@ -1,0 +1,34 @@
+#!/bin/sh
+#|-*- mode:lisp -*-|#
+#|
+exec ros -Q -- $0 "$@"
+|#
+(progn ;;init forms
+  (ros:ensure-asdf)
+  #+quicklisp(ql:quickload '() :silent t)
+  )
+
+(defpackage :ros.script.builder.3911630921
+  (:use :cl))
+(in-package :ros.script.builder.3911630921)
+
+(defun main (&rest argv)
+  (declare (ignorable argv))
+
+  
+  (if (eq (uiop/os:detect-os) :os-windows)
+      (push #p"c:/Users/jacek/Programming/Lisp/clos-sweeper/" asdf:*central-registry*)
+      (push #p"~/Programming/Lisp/clos-sweeper/" asdf:*central-registry*))
+
+  (unless (member "ultralisp"
+                  (mapcar (lambda (d) (ql-dist:name d))  (ql-dist:all-dists))
+                  :test #'string=)
+    (ql-dist:install-dist "http://dist.ultralisp.org/"
+                          :prompt nil))
+  
+  (ql:quickload :clos-sweeper)
+  (asdf:make :clos-sweeper)
+
+
+  )
+;;; vim: set ft=lisp lisp:
