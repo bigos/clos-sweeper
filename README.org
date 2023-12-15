@@ -76,7 +76,7 @@ sbcl --load ./launch.lisp
 *** Windows REPL
 #+begin_example
 (push #p"c:/Users/jacek/Programming/Lisp/clos-sweeper/" asdf:*central-registry*)
-(ql:quickload :clos-sweeper) 
+(ql:quickload :clos-sweeper)
 (clos-sweeper::main)
 #+end_example
 
@@ -125,7 +125,11 @@ we need it later.
 *** roswell
 https://github.com/roswell/roswell/wiki/Installation#windows
 #+begin_example
+# Windows
 pacman -S mingw-w64-x86_64-roswell
+# Linux
+sudo apt install roswell
+
 ros list installed
 #+end_example
 
