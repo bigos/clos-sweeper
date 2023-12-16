@@ -119,7 +119,8 @@ You have to clear the ~*.png~ files manually.
 No icons yet, the state of the game is indicated by colour of the tiles.
 
 ** Compiling latest sbcl on Windows
-I am not sure if roswell will be needed, but I will add the notes just in case
+I am not sure if roswell will be needed, but I will add the
+notes just in case
 we need it later.
 
 *** roswell
@@ -154,3 +155,5 @@ I can confirm that I can generate a Windows executable of over 70Mb and run it
 with the paths declared in the beginning of this document.
 
 Building a standalone executable may be done another day.
+
+https://www.datatable.online/en/blog/002-how-to-deploy-gtk-app-on-windows.html#precondition

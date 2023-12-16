@@ -1,5 +1,10 @@
 ;;;; clos-sweeper.asd
 
+#+sb-core-compression
+(defmethod asdf:perform ((o asdf:image-op)
+                         (c asdf:system))
+  (uiop:dump-image (asdf:output-file o c) :executable T :components T))
+
 (uiop:register-image-restore-hook
  (lambda ()
    (let* ((namespace "Gtk")
