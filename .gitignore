@@ -3,3 +3,5 @@ src/clos-sweeper.exe
 
 # ignore Unix executable
 src/clos-sweeper
+
+*.dll
