@@ -2,6 +2,8 @@
 
 [[file:screenshot-won.png]]
 
+[[file:distribution.zip][Windows distribution]]
+
 A toy mine sweeper written in Common Lisp. Left mouse click uncovers the boxes.
 Right mouse click toggles the mine state. There are two different colours for
 right clicked boxes. Pink if there is a mine in that field and purple for

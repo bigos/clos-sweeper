@@ -41,10 +41,10 @@ cp -rv /mingw64/share/icons/hicolor    ./distribution/share/icons/
 
 echo "copying all the rest"
 cp -rv /mingw64/etc ./distribution/
-cp -rv /mingw64/include ./distribution/
-cp -rv /mingw64/lib ./distribution/
-cp -rv /mingw64/libexec ./distribution/
-cp -rv /mingw64/share ./distribution/
-cp -rv /mingw64/var ./distribution/
+# cp -rv /mingw64/include ./distribution/
+# cp -rv /mingw64/lib ./distribution/
+# cp -rv /mingw64/libexec ./distribution/
+# cp -rv /mingw64/share ./distribution/
+# cp -rv /mingw64/var ./distribution/
 
 echo "==============done==================="
