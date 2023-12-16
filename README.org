@@ -173,6 +173,9 @@ trimming does not work. Possibly the only way to distribute the Windows version
 is to use MSYS2.
 
 ** generating again
-remove src/clos-sweeper.exe
-run ./builder.ros
-run ./prepare_distribution.sh
+#+begin_example
+  rm .\src\clos-sweeper.exe  
+  sh .\builder.ros
+  .\src\clos-sweeper.exe
+#+end_example
+
