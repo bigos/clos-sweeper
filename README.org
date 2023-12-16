@@ -2,7 +2,7 @@
 
 [[file:screenshot-won.png]]
 
-[[file:distribution.zip][Windows distribution]]
+[[https://github.com/bigos/clos-sweeper/raw/master/distribution.zip][zipped Windows distribution folder]]
 
 A toy mine sweeper written in Common Lisp. Left mouse click uncovers the boxes.
 Right mouse click toggles the mine state. There are two different colours for
