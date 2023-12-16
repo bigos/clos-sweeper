@@ -2,12 +2,22 @@
 
 [[file:screenshot-won.png]]
 
-[[https://github.com/bigos/clos-sweeper/raw/master/distribution.zip][zipped Windows distribution folder]]
 
 A toy mine sweeper written in Common Lisp. Left mouse click uncovers the boxes.
 Right mouse click toggles the mine state. There are two different colours for
 right clicked boxes. Pink if there is a mine in that field and purple for
 flagged field without mine. This makes it helpful to solve even the large grid.
+
+While you can download the zipped folder it refuses to run from the Windows File Manager.
+[[https://github.com/bigos/clos-sweeper/raw/master/distribution.zip][zipped Windows distribution folder]]
+
+The error I get is:
+#+begin_example
+Unhandled SB-KERNEL::UNDEFINED-ALIEN-FUNCTION-ERROR in thread #<SB-THREAD:THREAD "main thread" RUNNING
+                                                                 {1002350003}>:
+  The alien function "g_error_free" is undefined.
+#+end_example
+
 
 **  License
 
