@@ -163,9 +163,4 @@ I added a MSYS2 script that copies files to distribution folder.
   ./prepare_distribution.sh 
 
 
-But I had no luck. Copying all dlls and trying to run the app gives me error:
-  The alien function "g_error_free" is undefined.
-
-It is somewhat related to incorrect GTK enviroment
-
-For some reason trying to run deploy did not give me an app that would run successfully.
+I have a collection of dlls that work and now I have to trim the rest.
