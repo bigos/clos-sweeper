@@ -157,3 +157,15 @@ with the paths declared in the beginning of this document.
 Building a standalone executable may be done another day.
 
 https://www.datatable.online/en/blog/002-how-to-deploy-gtk-app-on-windows.html#precondition
+
+I added build_distribution.sh that is meant to be run from the MSYS2 terminal
+  cd /c/Users/jacek/Programming/Lisp/clos-sweeper/
+  ./build_distribution.sh
+
+
+But I had no luck. Copying all dlls and trying to run the app gives me error:
+  The alien function "g_error_free" is undefined.
+
+It is somewhat related to incorrect GTK enviroment
+
+For some reason trying to run deploy did not give me an app that would run successfully.
