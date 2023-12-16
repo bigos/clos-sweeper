@@ -154,13 +154,13 @@ https://github.com/lisp-tips/lisp-tips/issues/20
 I can confirm that I can generate a Windows executable of over 70Mb and run it
 with the paths declared in the beginning of this document.
 
-Building a standalone executable may be done another day.
+Regular Windows SBCL does not support image compression. Possibly I could build
+SBCL from source to support it.
 
 https://www.datatable.online/en/blog/002-how-to-deploy-gtk-app-on-windows.html#precondition
 
 I added a MSYS2 script that copies files to distribution folder.
   cd /c/Users/jacek/Programming/Lisp/clos-sweeper/
   ./prepare_distribution.sh 
-
 
 I have a collection of dlls that work and now I have to trim the rest.
