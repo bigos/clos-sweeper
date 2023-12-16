@@ -15,13 +15,17 @@ echo "copying lisp executable"
 cp -v ./src/clos-sweeper.exe ./distribution/bin/
 
 echo "copying ALL DLLs"
-cp -v /mingw64/bin/* ./distribution/bin
+# cp -v /mingw64/bin/* ./distribution/bin
+# we may need to add
 
-# cp -v /mingw64/bin/libgtk-4-1.dll ./distribution/bin
-# cp -v /mingw64/bin/libcairo-2.dll ./distribution/bin
-# cp -v /mingw64/bin/libgirepository-1.0-1.dll ./distribution/bin
-# cp -v /mingw64/bin/libgobject-2.0-0.dll ./distribution/bin
-# cp -v /mingw64/bin/libwinpthread-1.dll ./distribution/bin
+cp -v /mingw64/bin/libglib-2.0-0.dll ./distribution/bin
+cp -v /mingw64/bin/libgio-2.0-0.dll ./distribution/bin
+
+cp -v /mingw64/bin/libgtk-4-1.dll ./distribution/bin
+cp -v /mingw64/bin/libcairo-2.dll ./distribution/bin
+cp -v /mingw64/bin/libgirepository-1.0-1.dll ./distribution/bin
+cp -v /mingw64/bin/libgobject-2.0-0.dll ./distribution/bin
+cp -v /mingw64/bin/libwinpthread-1.dll ./distribution/bin
 
 echo "preparing share folders"
 mkdir -p "./distribution/share/glib-2.0"
