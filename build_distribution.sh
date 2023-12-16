@@ -1,5 +1,7 @@
 #!/bin/bash.exe
 
+# use MSYS2 MINGW64 terminal to run this script
+
 echo "preparing the Windows distribution"
 
 
