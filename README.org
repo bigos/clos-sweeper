@@ -8,16 +8,9 @@ Right mouse click toggles the mine state. There are two different colours for
 right clicked boxes. Pink if there is a mine in that field and purple for
 flagged field without mine. This makes it helpful to solve even the large grid.
 
-While you can download the zipped folder it refuses to run from the Windows File Manager.
-[[https://github.com/bigos/clos-sweeper/raw/master/distribution.zip][zipped Windows distribution folder]]
 
-The error I get is:
-#+begin_example
-Unhandled SB-KERNEL::UNDEFINED-ALIEN-FUNCTION-ERROR in thread #<SB-THREAD:THREAD "main thread" RUNNING
-                                                                 {1002350003}>:
-  The alien function "g_error_free" is undefined.
-#+end_example
-
+I can not find the way to create a small zipped folder to distribute Windows executable.
+If you happen to know how to do it please provide advice.
 
 **  License
 
@@ -175,4 +168,11 @@ I added a MSYS2 script that copies files to distribution folder.
   cd /c/Users/jacek/Programming/Lisp/clos-sweeper/
   ./prepare_distribution.sh 
 
-I have a collection of dlls that work and now I have to trim the rest.
+I have a collection of dlls that work and now I have to trim the rest. But naiive
+trimming does not work. Possibly the only way to distribute the Windows version
+is to use MSYS2.
+
+** generating again
+remove src/clos-sweeper.exe
+run ./builder.ros
+run ./prepare_distribution.sh
