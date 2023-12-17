@@ -184,8 +184,8 @@ to develop on Windows.
 I need to prepare a similar ~launch-clos-sweeper.cmd~ that will use a similar
 mechanism to load the DLL files copied to distribution folder.
 
-I have the script that copies the ~windows-launcher.cmd~ into
-distribution folder and renames it.
+In prepare_distribution.sh I have the script that copies
+the ~windows-launcher.cmd~ into distribution folder and renames it.
 
 The script seems to run fine and sets the expected variables. However we get the
 error:
