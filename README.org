@@ -184,3 +184,14 @@ to develop on Windows.
 I need to prepare a similar ~launch-clos-sweeper.cmd~ that will use a similar
 mechanism to load the DLL files copied to distribution folder.
 
+I have the script that copies the ~windows-launcher.cmd~ into
+distribution folder and renames it.
+
+The script seems to run fine and sets the expected variables. However we get the
+error:
+#+begin_example
+  Error opening shared object "libgobject-2.0-0.dll":
+ The specified module could not be found.
+#+end_example
+
+despite the fact that the dll is copied to the bin folder
