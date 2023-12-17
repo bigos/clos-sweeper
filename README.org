@@ -150,8 +150,16 @@ This can generate an executable
 but for all our purposes the secrion Running at the top makes more sense.
 
 #+begin_example
-  rm .\src\clos-sweeper.exe  
+  rm .\src\clos-sweeper.exe
   sh .\builder.ros
   .\src\clos-sweeper.exe
 #+end_example
 
+** plan to create distribution
+I had asked this question but I had to give up.
+https://www.reddit.com/r/Common_Lisp/comments/18jiunr/has_anybody_ever_created_a_windows_and_gtk4/
+
+My plan is to revisit the distribution creation script and
+build a folder with  a start script that will
++ Set the correct PATH for the DLLs copied from MSYS2.
++ start my lisp executable
