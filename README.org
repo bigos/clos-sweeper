@@ -195,3 +195,12 @@ error:
 #+end_example
 
 despite the fact that the dll is copied to the bin folder
+
+Spending few hours trying to troubleshoot the problem was a waste of time.
+
+** Next idea - msys2 doctor
+
+I could tell the users to install MSYS2
+and do some checks to see if MSYS2 is installed and in good condition.
+
+That would allow us to avoid the super entangled mess of Windows distribution
