@@ -22,6 +22,9 @@ rm -rvf ./distribution/
 
 mkdir -p "./distribution/bin"
 
+echo "copying the launcher"
+cp -v ./windows-launcher.cmd ./distribution/launch-clos-sweeper.cmd
+
 echo "copying lisp executable"
 cp -v ./src/clos-sweeper.exe ./distribution/bin/
 
