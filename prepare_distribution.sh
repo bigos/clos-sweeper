@@ -1,5 +1,14 @@
 #!/bin/bash.exe
 
+# ###############################################################################
+# This is wrong because the created executable does not know where to look for
+# the DLL libraries.
+# We need a script that will start the Lisp executable only afer setting the PATH
+# correctly. Also we may need a doctor sccript that will examine the PATH ad warn
+# of potential problems.
+# ###############################################################################
+
+
 # use MSYS2 MINGW64 terminal to run this script
 
 echo "preparing the Windows distribution"
