@@ -147,7 +147,7 @@ https://github.com/roswell/roswell/wiki/How-to-setup-a-lisp-dev-environment-on-w
 
 ** generating executable
 This can generate an executable
-but for all our purposes the secrion Running at the top makes more sense.
+but for all our purposes the section Running at the top makes more sense.
 
 #+begin_example
   rm .\src\clos-sweeper.exe
