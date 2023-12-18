@@ -4,7 +4,7 @@
 (defun examine-library (path label)
   (if (uiop/filesystem:file-exists-p path)
       (format t "~A library found~%" label)
-      (error "could not find the expected ~A library" label)))
+      (warn "could not find the expected ~A library" label)))
 
 (defun examine ()
   (format t "~&~%~%running launcher on ~A~%" (uiop/os:detect-os))
@@ -21,15 +21,15 @@
                   (progn
                     (format t "MSYS2 bin folder check OK~%~%")
 
-                    (examine-library #p "c:/msys64/mingw64/bin/libgtk-4-1.dll" "gtk")            
+                    (examine-library #p "c:/msys64/mingw64/bin/libgtk-4-1.dll" "gtk")
                     (examine-library "c:/msys64/mingw64/bin/libcairo-2.dll" "cairo")
                     (examine-library "c:/msys64/mingw64/bin/libglib-2.0-0.dll" "glib")
                     (examine-library "c:/msys64/mingw64/bin/libgio-2.0-0.dll" "gio")
                     (examine-library "c:/msys64/mingw64/bin/libgirepository-1.0-1.dll" "girrepository")
                     (examine-library "c:/msys64/mingw64/bin/libgobject-2.0-0.dll" "gobject"))
-                  (error "directory not found ~A" "C:\\msys64\\mingw64\\bin")))
-            (error "MSYS2 bin path not found in the PATH environmental variable")))
-      (error "Expected Windows but found ~A" (uiop/os:detect-os))))
+                  (warn "directory not found ~A" "C:\\msys64\\mingw64\\bin")))
+            (warn "MSYS2 bin path not found in the PATH environmental variable")))
+      (warn "Expected Windows but found ~A" (uiop/os:detect-os))))
 
 (examine)
 
