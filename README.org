@@ -204,3 +204,5 @@ I could tell the users to install MSYS2
 and do some checks to see if MSYS2 is installed and in good condition.
 
 That would allow us to avoid the super entangled mess of Windows distribution
+
+Now I have the script ~msys2-launcher.cmd~ that can be used to start the Lisp executable from Windows File Explorer.
