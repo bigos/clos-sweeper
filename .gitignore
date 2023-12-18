@@ -1,9 +1,9 @@
-# ignore Windows executable
+# ignore compiled Windows executable
 src/clos-sweeper.exe 
 
-# ignore Unix executable
+# ignore compiled Unix executable
 src/clos-sweeper
 
-*.dll
 
-distribution
+
+
