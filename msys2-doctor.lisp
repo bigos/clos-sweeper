@@ -12,7 +12,9 @@
   (if (eq :os-windows (uiop/os:detect-os))
       (progn
         (format t "OS check OK~%")
-        (if (search "msys64/mingw64/bin" (uiop/os:getenv "PATH"))
+        (if (or
+             (search "mingw64/bin"  (uiop/os:getenv "PATH") :test #'equalp)
+             (search "mingw64\\bin" (uiop/os:getenv "PATH") :test #'equalp))
             (progn
               (format t "MSYS2 bin is found in environmet variable PATH~%")
               (if (uiop/filesystem:directory-exists-p #p "c:/msys64/mingw64/bin")
@@ -27,9 +29,7 @@
                     (examine-library "c:/msys64/mingw64/bin/libgobject-2.0-0.dll" "gobject"))
                   (error "directory not found ~A" "C:\\msys64\\mingw64\\bin")))
             (error "MSYS2 bin path not found in the PATH environmental variable")))
-      (error "Expected Windows but found ~A" (uiop/os:detect-os)))
-  ;; the end
-  )
+      (error "Expected Windows but found ~A" (uiop/os:detect-os))))
 
 (examine)
 
