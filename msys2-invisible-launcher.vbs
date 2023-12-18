@@ -1,4 +1,4 @@
-rem
+rem https://serverfault.com/questions/9038/run-a-bat-file-in-a-scheduled-task-without-a-window
 
 
 Set WshShell = CreateObject("WScript.Shell") 
