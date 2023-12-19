@@ -207,6 +207,9 @@ That would allow us to avoid the super entangled mess of Windows distribution
 
 Now I have the script ~msys2-launcher.cmd~ that can be used to start the Lisp executable from Windows File Explorer.
 
+** another possible MSYS2 solution
+https://stackoverflow.com/questions/47438779/executing-a-script-in-msys2-mingw
+
 ** simple solution
 Compile the Lisp executable on Windows. Create a cmd script that will add MSYS2
 path and call the executable. Create a shortcut to the cmd script to launch the
