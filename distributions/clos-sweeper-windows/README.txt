@@ -9,6 +9,7 @@ How am I supposed to start my executable so that in uses gtk and cairo libraries
 Also I added an example shortcut that works for my location.
 
 You can create your own shortcut by right-clicking on msys2-launcher.cmd and selecting the option Create shortcut.
+On Windows 11 you may need to click Show more options to see the option to create shortcut.
 Right clicking on the shortcut and selecting option Properties
 allows you to chenge the Run field
 from: Normal window
