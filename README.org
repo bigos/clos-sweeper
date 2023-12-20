@@ -102,6 +102,7 @@ sbcl --load  ~/Programming/Lisp/clos-sweeper/testing.lisp
 *** in the REPL
 #+begin_src lisp
   (push #p"~/Programming/Lisp/clos-sweeper/" asdf:*central-registry*)
+  (ql:quickload :clos-sweeper)
   (ql:quickload :clos-sweeper/tests)
   (asdf:test-system :clos-sweeper/tests)
 #+end_src

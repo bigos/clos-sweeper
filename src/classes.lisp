@@ -2,16 +2,16 @@
 
 ;;; ====================== classes =============================================
 (defclass/std model (set-unbound-slots-mixin)
-  ((selection :type          string)
-   (width     :type          (or null integer) :documentation "Canvas width")
-   (height    :type          (or null integer) :documentation "Canvas height")
-   (mouse-x   :type          (or null integer))
-   (mouse-y   :type          (or null integer))
-   (button-1  :type          (or null T))
-   (button-2  :type          (or null T))
-   (button-3  :type          (or null T))
-   (grid      :type          (or null grid))
-   (dark-mode :type          (or null T)))
+  ((selection :type string)
+   (width     :type (or null integer) :documentation "Canvas width")
+   (height    :type (or null integer) :documentation "Canvas height")
+   (mouse-x   :type (or null integer))
+   (mouse-y   :type (or null integer))
+   (button-1  :type (or null T))
+   (button-2  :type (or null T))
+   (button-3  :type (or null T))
+   (grid      :type grid              :std           (build-grid))
+   (dark-mode :type (or null T)))
   (:metaclass checked-class))
 
 (defun init-model (&optional (width 400) (height 420) (grid-size 8))
@@ -19,7 +19,6 @@
                                :selection "start uncovering mines"
                                :width width
                                :height height))
-  (setf (grid *model*) (build-grid grid-size))
   *model*)
 
 (defclass/std box (rel)
