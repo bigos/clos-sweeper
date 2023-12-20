@@ -14,30 +14,31 @@
              (uiop:symbol-call :gir :require-namespace namespace "4.0"))))))
 
 (asdf:defsystem #:clos-sweeper
-    :description "Clos-sweeper is a simple mine sweeper game"
-    :author "ruby.object@googlemail.com"
-    :license  "Public Domain"
-    :version "0.0.1"
-    :depends-on (#:alexandria
-                 #:serapeum
-                 #:defclass-std
-                 #:cl-gtk4 #:cl-gdk4 #:cl-glib #:cl-cairo2)
-    ;; --------------------------------
-    :build-operation program-op
-    :build-pathname "clos-sweeper"
-    :entry-point "clos-sweeper:main"
-    ;; --------------------------------
-    :pathname "src/"
-    :serial t
-    :components ((:file "package")
-                 (:file "globals")
-                 (:file "type-checking")
-                 (:file "classes")
-                 (:file "events")
-                 (:file "gui-drawing")
-                 (:file "menu")
-                 (:file "gtk4")
-                 (:file "clos-sweeper")))
+  :description "Clos-sweeper is a simple mine sweeper game"
+  :author "ruby.object@googlemail.com"
+  :homepage "https://github.com/bigos/clos-sweeper"
+  :license  "Public Domain"
+  :version "0.0.1"
+  :depends-on (#:alexandria
+               #:serapeum
+               #:defclass-std
+               #:cl-gtk4 #:cl-gdk4 #:cl-glib #:cl-cairo2)
+  ;; --------------------------------
+  :build-operation program-op
+  :build-pathname "clos-sweeper"
+  :entry-point "clos-sweeper:main"
+  ;; --------------------------------
+  :pathname "src/"
+  :serial t
+  :components ((:file "package")
+               (:file "globals")
+               (:file "type-checking")
+               (:file "classes")
+               (:file "events")
+               (:file "gui-drawing")
+               (:file "menu")
+               (:file "gtk4")
+               (:file "clos-sweeper")))
 
 ;; (push #p"~/Programming/Lisp/clos-sweeper/" asdf:*central-registry*)
 ;; (ql:quickload :clos-sweeper)

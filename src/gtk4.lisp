@@ -22,7 +22,7 @@
                                                                           (uiop/os:detect-os)
                                                                           (uiop/os:architecture)
                                                                           (uiop/os:implementation-identifier)
-                                                                          system))
+                                                                          (asdf/system:system-homepage system)))
           (gtk4:about-dialog-logo-icon-name dialog) "application-x-addon")
     (values dialog)))
 
