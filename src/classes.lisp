@@ -81,6 +81,8 @@
                                (+ offset-y (* c dist))
                                tile-size tile-size)))
           (add-child parent box))))
+
+    (make-random-state T)
     (loop for b in
                 (subseq (alexandria:shuffle (children parent)) 0 mines-count)
           do (setf (state b) :covered-mine))
