@@ -12,7 +12,7 @@
   (let ((dialog (gtk4:make-about-dialog))
         (system (asdf:find-system :clos-sweeper)))
     (setf (gtk4:about-dialog-authors      dialog)   (list "Jacek Podkanski")
-          (gtk4:about-dialog-website      dialog)   "https://github.com/bigos/clos-sweeper"
+          (gtk4:about-dialog-website      dialog)   (asdf/system:system-homepage system)
           (gtk4:about-dialog-program-name dialog)   "CLOS Sweeper"
           (gtk4:about-dialog-comments     dialog)   "A sample GUI app written in Lisp"
           (gtk4:about-dialog-license      dialog)   "Public Domain"
@@ -21,8 +21,7 @@
                                                                           (lisp-implementation-version)
                                                                           (uiop/os:detect-os)
                                                                           (uiop/os:architecture)
-                                                                          (uiop/os:implementation-identifier)
-                                                                          (asdf/system:system-homepage system)))
+                                                                          (uiop/os:implementation-identifier)))
           (gtk4:about-dialog-logo-icon-name dialog) "application-x-addon")
     (values dialog)))
 
