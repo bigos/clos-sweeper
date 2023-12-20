@@ -3,14 +3,18 @@
 ;;; ====================== classes =============================================
 (defclass/std model (set-unbound-slots-mixin)
   ((selection :type string)
-   (width     :type (or null integer) :documentation "Canvas width")
-   (height    :type (or null integer) :documentation "Canvas height")
+   (width     :type (or null integer)
+              :documentation "Canvas width")
+   (height    :type (or null integer)
+              :documentation "Canvas height")
    (mouse-x   :type (or null integer))
    (mouse-y   :type (or null integer))
    (button-1  :type (or null T))
    (button-2  :type (or null T))
    (button-3  :type (or null T))
-   (grid      :type grid              :std           (build-grid))
+   (grid      :type grid
+              :documentation "the grid with boxes that may contain mines"
+              :std (build-grid))
    (dark-mode :type (or null T)))
   (:metaclass checked-class))
 

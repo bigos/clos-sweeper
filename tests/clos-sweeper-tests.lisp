@@ -2,6 +2,10 @@
 
 (in-package #:clos-sweeper-test)
 
+;; (setf fiveam:*debug-on-error* T)
+;; (setf fiveam:*on-error* :debug)
+(setf fiveam:*on-error* :backtrace)
+
 (def-suite clos-sweeper-suite
   :description "suite to hold other suites and tests")
 
