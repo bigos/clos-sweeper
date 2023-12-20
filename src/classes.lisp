@@ -55,9 +55,11 @@
          (grid-size (if (member size '(8 16 32))
                         size
                         (error "Unexpected size ~S" size)))
-         (dist (* 0.8  (min (or (width *model*)
+         (dist (* 0.8  (min (or (and *model*
+                                     (width *model*))
                                 20)
-                            (or (height *model*)
+                            (or (and *model*
+                                     (height *model*))
                                 20))))
          (tile-size (* 0.70 dist))
          (mines-count  (floor (/ (expt grid-size 2)
