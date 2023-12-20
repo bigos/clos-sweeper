@@ -123,12 +123,12 @@ You have to clear the ~*.png~ files manually.
 *** Icons
 No icons yet, the state of the game is indicated by colour of the tiles.
 
-** Compiling latest sbcl on Windows
+** Roswell
 I am not sure if roswell will be needed, but I will add the
 notes just in case
 we need it later.
 
-*** roswell
+*** installing roswell
 https://github.com/roswell/roswell/wiki/Installation#windows
 #+begin_example
 # Windows
@@ -145,7 +145,7 @@ https://github.com/roswell/roswell/wiki
 
 https://github.com/roswell/roswell/wiki/How-to-setup-a-lisp-dev-environment-on-windows-with-Roswell
 
-** generating executable
+*** generating executable with roswell
 This can generate an executable
 but for all our purposes the section Running at the top makes more sense.
 
@@ -155,57 +155,15 @@ but for all our purposes the section Running at the top makes more sense.
   .\src\clos-sweeper.exe
 #+end_example
 
-** plan to create distribution
-I had asked this question but I had to give up.
-https://www.reddit.com/r/Common_Lisp/comments/18jiunr/has_anybody_ever_created_a_windows_and_gtk4/
-
-My plan is to revisit the distribution creation script and
-build a folder with  a start script that will
-+ Set the correct PATH for the DLLs copied from MSYS2.
-+ start my lisp executable
-
-** generating distribution folder
-
-I have fresh installed MSYS2. When I search for PATH in Windows search I get the
-Comtrol Panel option:
-#+begin_example
-Edit environment variables for your account
-#+end_example
-
-There is no mention of
-#+begin_example
-msys64/mingw64/bin
-#+end_example
-in the Path.
-
-Above in this document I mention Cmd files that allow me to use MSYS2 libraries
-to develop on Windows.
-
-I need to prepare a similar ~launch-clos-sweeper.cmd~ that will use a similar
-mechanism to load the DLL files copied to distribution folder.
-
-In prepare_distribution.sh I have the script that copies
-the ~windows-launcher.cmd~ into distribution folder and renames it.
-
-The script seems to run fine and sets the expected variables. However we get the
-error:
-#+begin_example
-  Error opening shared object "libgobject-2.0-0.dll":
- The specified module could not be found.
-#+end_example
-
-despite the fact that the dll is copied to the bin folder
-
-Spending few hours trying to troubleshoot the problem was a waste of time.
-
-** Next idea - msys2 doctor
+** msys2 doctor
 
 I could tell the users to install MSYS2
 and do some checks to see if MSYS2 is installed and in good condition.
 
 That would allow us to avoid the super entangled mess of Windows distribution
 
-Now I have the script ~msys2-launcher.cmd~ that can be used to start the Lisp executable from Windows File Explorer.
+The folder ~distributions/clos-sweeper-windows~ contains 2 ways of testing MSYS2
+installation.
 
 ** another possible MSYS2 solution
 https://stackoverflow.com/questions/47438779/executing-a-script-in-msys2-mingw
