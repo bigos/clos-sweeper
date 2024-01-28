@@ -35,7 +35,10 @@ https://ultralisp.org/
 Make sure you have gtk4 libraries installed.
 
 *** Linux
-On Ubuntu like Linux you run: sudo apt install libgtk-4-dev
+On Ubuntu like Linux you run:
+#+begin_example
+sudo apt install libgtk-4-dev
+#+end_example
 
 *** Windows
 First I installed Emacs from using the installer from
